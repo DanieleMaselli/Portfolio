@@ -117,6 +117,7 @@ img {
 
 .link-project:hover {
   opacity: 0.5;
+  text-decoration-color: #7171f3;
 }
 
 .toggle-button {
