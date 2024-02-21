@@ -8,7 +8,7 @@ VanillaTilt.init(document.querySelectorAll(".img"));
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
-  console.log(e);
+  //console.log(e);
 });
 
 function raf(time) {
@@ -66,4 +66,37 @@ revealLink.forEach((element, i) => {
       },
     }
   );
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Function to create a common animation for each project item
+function animateProjectItemOnReload(item) {
+  gsap.from(item, {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+  });
+}
+
+// Select all project grid items and apply animation on page reload
+document.addEventListener("DOMContentLoaded", function () {
+  const projectItems = document.querySelectorAll(".project-item");
+
+  projectItems.forEach((item) => {
+    animateProjectItemOnReload(item);
+  });
+});
+
+let typed = new Typed(".auto-type", {
+  strings: [
+    "UI/UX Design",
+    "creative solutions",
+    "digital design",
+    "some coding",
+    "interaction design",
+  ],
+  typeSpeed: 170,
+  backSpeed: 170,
+  loop: true,
 });

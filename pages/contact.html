@@ -1,9 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-157396820-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-157396820-1");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../asset/fav.jpg" />
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,700,900"
       rel="stylesheet"
@@ -22,7 +36,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="normalize.css" />
+
     <link rel="stylesheet" href="../style.css" />
 
     <title>Contact | Daniele Maselli</title>
@@ -44,7 +58,7 @@
 
       <div class="navigation-links flex">
         <ul class="">
-          <li><a href="../project.html">projects</a></li>
+          <li><a href="../index.html">projects</a></li>
           <li><a href="about.html">about</a></li>
           <li><a style="font-weight: 500" href="contact.html">contact</a></li>
         </ul>
@@ -52,12 +66,17 @@
     </nav>
     <div class="wrapper">
       <div class="project-container">
-        <h1>Say Hello</h1>
+        <h1>Say Hello!</h1>
         <p class="project-text">
           If you have any questions or inqueries, please feel free to contact
           me:
         </p>
-        <p class="project-text">danymase@gmail.com</p>
+        <a
+          href="mailto:danymase@gmail.com?subject=contact"
+          class="project-text web-links"
+          >Send mail at: danymase@gmail.com</a
+        >
+        <a class="project-text web-links">+49 (0) 176 790 25 723</a>
         <p style="font-weight: 200" class="project-text">
           Daniele Maselli | All rights reserved. It is not allowed to copy,
           change or how ever else use any content of this website whithout
@@ -109,8 +128,10 @@
     </footer>
   </body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="tilt.jquery.min.js"></script>
-  <script src="vanilla-tilt.js"></script>
-  <script src="main.js"></script>
+  <script src="../vanilla-tilt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="../main.js"></script>
 </html>
